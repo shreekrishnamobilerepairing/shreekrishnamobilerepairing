@@ -11,6 +11,124 @@
             display: block;
             margin: 0 auto; /* Center the images horizontally */
         }
+        /* Basic styling for the contact page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        .container {
+	    flex-wrap: wrap;
+	    background-image: linear-gradient(yellow, red);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .contact-info {
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+        }
+        .contact-info-icon {
+            margin-right: 10px;
+        }
+        .contact-form {
+            text-align: center;
+        }
+        .input-box {
+            margin-bottom: 20px;
+	    width: 50vw;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+	#barcode-container {
+            text-align: center;
+            padding: 20px;
+            width: 300px; /* Set the desired width for the container */
+            border: 1px solid #ccc; /* Optional: Add a border for visual clarity */
+        }
+        .containerimage {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Style for each inner div */
+        .barcode-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Style for the barcode image */
+        .barcode-image {
+            width: 150px;
+            height: auto;
+        }
+
+        /* Style for the caption */
+        .caption {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .contact-div {
+            background-color: #e0e0e0;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        /* Style for the phone number */
+        .phone-number {
+            font-weight: bold;
+            font-size: 16px;
+        }
+	  .left-div {
+    float: left;
+    width: 33%;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
+  }
+  .middle-div {
+    float: left;
+    width: 33%;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
+  }
+  .right-div {
+    float: left;
+    width: 33%;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
+  }
+
     </style>
 </head>
 <body>
@@ -22,13 +140,73 @@
     <img src="Portfolio.png"  alt="Image 5" />
     <img src="About.png"  alt="Image 6" />
     <img src="Contact.png"  alt="Image 7" />
-    <iframe
-    src="Contactus.html"
-    name="targetframe"
-    allowTransparency="true"
-    scrolling="no"
-    frameborder="0"
-    >
-    </iframe>
+    <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <div class="contact-info-item">
+                <div class="contact-info-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="contact-info-content">
+                    <h4>Address</h4>
+                    <p>SHOP NO.141 1ST FLOOR,<br>NEAR MAHESH CO OP BANK SARDA SANKUL<br>OPP SHILPA DIANING HALL<br>MG ROAD, NASHIK</p>
+                </div>
+            </div>
+            <div class="contact-info-item">
+                <div class="contact-info-icon">
+                    <a href="https://www.instagram.com/shreekrishnamobilerepairing?igsh=MXZudTJhbzd1YWEwZg==" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="contact-info-content">
+                    <h4>Instagram</h4>
+                    <p><a href="https://www.instagram.com/shreekrishnamobilerepairing?igsh=MXZudTJhbzd1YWEwZg==" target="_blank">Follow us on Instagram</a></p>
+                </div>
+            </div>
+            <div class="contact-info-item">
+                <div class="contact-info-icon">
+                    <a href="https://g.co/kgs/PYGv7Tg" target="_blank">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </a>
+                </div>
+                <div class="contact-info-content">
+                    <h4>Google Maps</h4>
+                    <p><a href="https://g.co/kgs/PYGv7Tg" target="_blank">View on Google Maps</a></p>
+                </div>
+            </div>
+        </div>
+
+    <div class="containerimage">
+        <div class="barcode-container left-div">
+            <img src="gmap.jpeg" alt="Google Maps Barcode" class="barcode-image">
+            <p class="caption">Locate us on Google Maps</p>
+        </div>
+        <div class="contact-div middle-div">
+            <i class="icon">&#128222;</i> <!-- Call icon -->
+            <p class="phone-number">Call or WhatsApp me at 9922000619</p>
+        </div>
+        <div class="barcode-container right-div">
+            <img src="insb.jpeg" alt="Instagram Barcode" class="barcode-image">
+            <p class="caption">Follow us on Instagram</p>
+        </div>
+    </div>
+        <div class="contact-form">
+            <form action="mailto:shreekrishnamobilerepairing@gmail.com" method="post" enctype="text/plain">
+                <h2>Send Message</h2>
+                <div class="input-box">
+                    <input type="text" required name="full_name" placeholder="Full Name">
+                </div>
+                <div class="input-box">
+                    <input type="email" required name="email" placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <textarea required name="message" placeholder="Type your Message..."></textarea>
+                </div>
+                <div class="input-box">
+                    <input type="submit" value="Send">
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
